@@ -1,7 +1,9 @@
 #pragma once
 class MainMenuPrinter
 {
+	
 	friend class MainMenu;
-	virtual void mainMenuPrinterPolish();
+	void polish();
+	void english();
 };
 

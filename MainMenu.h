@@ -4,6 +4,6 @@ class MainMenu
 	friend int main();
 	MainMenu();
 	~MainMenu();
-	void MenuswitchBox(int &input);
+	void menuChooser(int userChoice);
 };
 
