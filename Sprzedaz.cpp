@@ -1,12 +1,14 @@
 #include "Sprzedaz.h"
-#include "TakeFromUserData.h"
-#include "SprzedazMenuPrinter.h"
+#include "SprzedazMenu.h"
+#include "Bill.h"
 #include <iostream>
 
 Sprzedaz::Sprzedaz()
 {
-	int userChoice;
-	TakeFromUserData input(userChoice);
+	SprzedazMenu menu;
+	Bill newBill(1);
+	
+
 }
 
 

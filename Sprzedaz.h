@@ -3,5 +3,6 @@ class Sprzedaz
 {
 	friend class MainMenu;
 	Sprzedaz();
+
 };
 
