@@ -11,7 +11,8 @@ public:
 	Bill(int);
 	std::vector<Product>listOfProductBuyByConsumer;
 	~Bill();
-	
-
+	void addProductToBill();
+	void removeProductFromBill();
+	void printBill();
 };
 
