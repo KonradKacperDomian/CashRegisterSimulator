@@ -6,7 +6,7 @@
 #include "ProductListManager.h"
 Bill::Bill(int billNumber)
 {
-    billNumber = numberOfBill;
+    numberOfBill = billNumber;
 }
 
 Bill::~Bill()

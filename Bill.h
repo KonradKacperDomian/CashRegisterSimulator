@@ -2,11 +2,14 @@
 #include <string>
 #include <vector>
 #include "Product.h"
+#include <string>
 class Bill
 {
+	friend class DailyRaport;
+protected:
 	int numberOfBill;
 	double vat;
-	char dateOfBill[80];
+	std::string dateOfBill;
 public:
 	Bill(int);
 	std::vector<Product>listOfProductBuyByConsumer;
