@@ -20,16 +20,14 @@ void SprzedazMenu::userChoice(int userChoice)
 		{
 			system("cls");
 			Bill newBill(1);
-
 			//std::cout << "opcja 1";
-			
 			break;
 		}
 		case 5:
 		{
 			//std::cout << "opcja 5";
 			MainMenu backToMenu;
-			break; //wraca do funkcji main i tym samym konczy program
+			break; 
 		}
 		default:
 
