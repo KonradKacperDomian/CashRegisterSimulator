@@ -13,11 +13,12 @@ class DailyRaport
 	std::string fileName;
 	std::ofstream dailyRaport;
 	std::vector<Bill> bills;
-
+	
 public:
 	DailyRaport();
 	~DailyRaport();
 	void addData(Bill bill);
 	void removeData();
+	bool findBill(int);
 };
 
