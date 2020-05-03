@@ -45,8 +45,7 @@ void ProductManagementMenu::userChooser(ProductListManager& productMenadzer)
 		}
 		case 4:
 		{
-			MainMenu menu;
-			menu.menuChooser(productMenadzer);
+			
 			break;
 		}
 		default:
