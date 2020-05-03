@@ -1,5 +1,6 @@
 #pragma once
 #include "ProductListManager.h"
+#include "DailyRaport.h"
 class MainMenu
 {
 	friend int main();
@@ -7,6 +8,6 @@ class MainMenu
 public:
 	MainMenu();
 	~MainMenu();
-	void menuChooser(ProductListManager&);
+	bool menuChooser(ProductListManager&, DailyRaport&);
 };
 

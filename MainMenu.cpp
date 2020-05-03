@@ -1,6 +1,6 @@
 #include "MainMenu.h"
 #include "MainMenuPrinter.h"
-#include "Sprzedaz.h"
+#include "Sale.h"
 #include "TakeFromUserData.h"
 #include "ProductListManager.h"
 #include "ProductManagementMenu.h"
@@ -18,7 +18,7 @@ MainMenu::~MainMenu()
 	system("cls");
 }
 
-void MainMenu::menuChooser(ProductListManager& productMenadzer)
+bool MainMenu::menuChooser(ProductListManager& productMenadzer, DailyRaport& dailyRaport)
 {
 	int userChoice;
 	TakeFromUserData input(userChoice);
@@ -28,15 +28,15 @@ void MainMenu::menuChooser(ProductListManager& productMenadzer)
 		{
 		case 1:
 		{
-			//sd::cout << "opcja 1";
-			Sprzedaz sprzedaz; //utworz obiekt sprzedaz //bedzie sprzedaz(&doListyProduktow, &doRaportuDziennego)
+			Sale sale;
+			sale.displayMenu();
+			sale.menuChooser(productMenadzer, dailyRaport);
 			break;
 		}
 		case 2:
 		{
-			system("cls");
-			std::cout << "opcja 2";
-			//Wymiana wymiana;
+			Sale sale;
+			sale.replacement(dailyRaport);
 			break;
 		}
 		case 3:
@@ -63,23 +63,22 @@ void MainMenu::menuChooser(ProductListManager& productMenadzer)
 				switch (yesOrNo)
 				{
 				case 'y':
+					return true;
 					break;
 				case 'n':
 				{
-					MainMenu menu;
-					menu.menuChooser(productMenadzer);
+					return false;
 					break;
 				}	
 				default:
 				{
 					std::cout << "only (t/n)" << std::endl;
-					TakeFromUserData input(userChoice);
+					TakeFromUserData userChoice(yesOrNo);
 					--i;
 					break;
 				}	
 				}
 			}
-			break; //wraca do funkcji main i tym samym konczy program
 		}
 		default:
 
@@ -89,6 +88,7 @@ void MainMenu::menuChooser(ProductListManager& productMenadzer)
 			break;
 		}
 	}
+	return false;
 }
 
 
